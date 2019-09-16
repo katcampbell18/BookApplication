@@ -16,6 +16,17 @@ public class Book {
     public String getDisplayText(){
         return title + " written by " + author + " is about " +description;
     }
+    public String getTotalPrice(){
+        int total = 0;
+        if(isInStock){
+            total += price;
+        }
+        else{
+            total+=0;
+            System.out.println("The book is not available");
+        }
+        return "You total price is " + total;
+    }
     public String getTitle() {
         return title;
     }
